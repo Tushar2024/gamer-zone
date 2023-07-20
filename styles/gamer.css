@@ -104,7 +104,7 @@
 .banner-title{
     color: #8758F1;
     text-align: center;
-    font-size: 5.9rem;
+    font-size: 4.5rem;
     font-weight: 800;
 }
 .primary-text{
@@ -148,21 +148,25 @@
    align-items: center;
 
 }
+
+.games-card-img img:hover{
+    border-radius: 16px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(<path-to-image>), lightgray 50% / cover no-repeat;
+    border: 3px solid tomato;
+}
 .games-card-container img{
     width: 240px;
     height: 300px;
 }
 
-
-
 /* play instantly related styles */
+
 .play-instantly{
     margin: 0px 200px 0px;
     text-align: right;
     display: flex;
     gap: 130px;
     align-items: center;
-    /* justify-content: center; */
 }
 
 .play-img{
@@ -205,8 +209,7 @@
     text-align: center;
     background-color: #0B0223;
     padding: 100px 300px 100px;
-    /* margin: 0 auto; */
-}
+   }
 .footer-logo{
     display: flex;
     gap: 20px;
@@ -256,42 +259,83 @@
     font-weight: 500;
 }
 
+
+.hide{
+    display: none;
+}
+
+
+
+
 /* responsive related styles */
 
 /* small device  */
 @media screen and (max-width: 576px) {
     .nav,
     .nav-content,
-    .banner
+    .banner,
+    .games-card-container,
+    .play-instantly
     {
         flex-direction: column;
+        
     }
     .nav{
         padding: 70px 50px;
         gap: 50px;
         margin-bottom: 70px;
         box-shadow: none;
-        
     }
-    .nav-content{
-        gap: 30px;
+    .nav-content,
+    .games-card-container
+    {
+        gap: 20px;
     }
     .banner{
-        padding: 20px;
+        padding: 0px;
         gap: 10px;
         margin: 0;
     }
     .banner-content{
-        padding: 0;
+        padding: 10px;
         background-size: 100%;
-        padding: 30px;
+    
     }
     .banner-img img{
         width: 80%;
+        padding: 20px;
+    }
+    .online-games-section {
+        margin: 50px 0 0 0;
         padding: 10px;
     }
+    .play-instantly{
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        gap: 20px;
+    }
+    .play-img img{
+        width: 50%;
+    }
+    .play-pocket-img img{
+        width: 20%;
+        position: relative;
+        bottom: 220px;
+        left: 150px;
+        margin-left: 20px;
+    }
+    .related-games-container{
+        margin: 0;
+        padding: 0;
+        padding-bottom: 80px;
+}
+.footer{
+    text-align: center;
+    padding: 50px;
 }
 
+}
 
 
 
@@ -300,14 +344,16 @@
 @media screen and (min-width: 576px) and (max-width: 992px){
     .nav,
     .nav-content,
-    .banner
+    .banner,
+    .games-card-container,
+    .play-instantly
     {
         flex-direction: column;
     }
     .nav{
-        padding: 70px 50px;
+        padding: 70px 0px;
         gap: 50px;
-        margin-bottom: 70px;
+        margin-bottom: 50px;
         box-shadow: none;
         align-items: center;
     }
@@ -319,13 +365,32 @@
         gap: 10px;
         margin: 0;
     }
-    .banner-content{
-        
-        background-size: auto;
+    .banner-content{ 
+        background-size: 100%;
         padding: 30px;
     }
     .banner-img img{
         width: 80%;
         padding: 30px;
+    }
+    .online-games-section {
+        margin: 50px 0 50px 0;
+        padding: 30px;
+    }
+    .play-instantly{
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+        gap: 20px;
+    }
+    .play-img img{
+        width: 50%;
+    }
+    .play-pocket-img img{
+        width: 20%;
+        position: relative;
+        bottom: 220px;
+        left: 150px;
+        margin-left: 20px;
     }
 }
